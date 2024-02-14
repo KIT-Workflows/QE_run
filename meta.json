@@ -1,0 +1,16 @@
+{
+    "workflow_environment":"SimStack",
+    "title": "QE_run",
+    "description": "This script automates the process of running Quantum ESPRESSO calculations. It reads parameters from a YAML file, sets up the environment, and executes the Quantum ESPRESSO calculation using MPI for parallel execution. The output is saved to a specified file.",
+    "authors": [
+        "J. Schaarschmidt",
+        "A. Buldin"
+    ],
+    "version": "0.0.1",
+    "logo": "QE_run.png",
+    "keywords": [
+        "SimStack",
+        "WaNo",
+        "Quantum ESPRESSO"
+    ]
+}

@@ -1,0 +1,31 @@
+<WaNoTemplate>
+    <WaNoMeta>
+        <Author>
+            <Name> J. Schaarschmidt </Name>
+        </Author>
+
+        <Description>
+            This script automates the process of running Quantum ESPRESSO calculations. It reads parameters from a YAML file, sets up the environment, and executes the Quantum ESPRESSO calculation using MPI for parallel execution. The output is saved to a specified file.
+        </Description>
+
+    </WaNoMeta>
+
+    <WaNoRoot name="QE_run">
+        <WaNoFile logical_filename=".pwi" name="input_file">.pwi</WaNoFile>
+    </WaNoRoot>
+
+    <WaNoExecCommand>
+        export NANOVER=V4
+    	source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
+        conda activate qe
+        python QE_run.py
+    </WaNoExecCommand>
+
+    <WaNoInputFiles>
+        <WaNoInputFile logical_filename="QE_run.py">QE_run.py</WaNoInputFile>
+    </WaNoInputFiles>
+
+    <WaNoOutputFiles>
+        <WaNoOutputFile>*.pwo</WaNoOutputFile>
+    </WaNoOutputFiles>
+</WaNoTemplate>
